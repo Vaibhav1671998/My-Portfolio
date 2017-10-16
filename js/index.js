@@ -7,7 +7,7 @@ $('#footer1').hide();
 $('#about').hide();
 
 $('.circle').on('click' , function () {
-	$('.circle').hide();
+	$('html, body').animate({ scrollTop: $(document).height() }, 600);
 	displayBio();
 	$('#bio').show();
 	$('#bio').focus();
@@ -33,14 +33,14 @@ var skills = [
 
 var education  = [
 	{
-		institute : 'SVM , Ludhiana',
+		institute : 'Sanatan Vidya Mandir Sen. Sec. School , Ludhiana',
 		img : './img/svm.jpg',
 		alt : 'SVM School image',
 		year : '2014',
 		major : ['English ',' Hindi ',' Punjabi']
 	},
 	{
-		institute : 'BVM , Ludhiana',
+		institute : 'Bhartiya Vidya Mandir Sen. Sec. School , Ludhiana',
 		img : './img/bvm.jpg',
 		alt : 'SVM School image',
 		year : '2016',
@@ -136,23 +136,22 @@ function displayBio() {
 	});
 }
 
-$("#bio").mouseover(function () {
+$("#bio").mouseout(function () {
 	$('.left').attr('style','color:#FFFAF0;');
 	$('.right').attr('style','color:#FFFAF0;');
-	$('.left').find('i').removeClass('fadeOut');
-	$('.right').find('i').removeClass('fadeOut');
-	$('.left').find('i').addClass('fadeIn');
-	$('.right').find('i').addClass('fadeIn');
-
-});
-
-$("#bio").mouseout(function () {
-	$('.left').attr('style','color:#ff99ff;');
-	$('.right').attr('style','color:#ff99ff;');
 	$('.left').find('i').removeClass('fadeIn');
 	$('.right').find('i').removeClass('fadeIn');
 	$('.left').find('i').addClass('fadeOut');
 	$('.right').find('i').addClass('fadeOut');
+});
+
+$("#bio").mouseover(function () {
+	$('.left').attr('style','color:#ff99ff;');
+	$('.right').attr('style','color:#ff99ff;');
+	$('.left').find('i').removeClass('fadeOut');
+	$('.right').find('i').removeClass('fadeOut');
+	$('.left').find('i').addClass('fadeIn');
+	$('.right').find('i').addClass('fadeIn');
 });
 
 for(var i=0;i<education.length;i++)
@@ -169,7 +168,7 @@ for(var i=0;i<projects.length;i++)
 {
 	projectsElem.append('<div style="display: inline;width:80%;margin-right:auto;"><h3 class="blue-text get-margin">'+ projects[i].name +
 		'</h3><span class="black-text get-margin">Description : <span class="blue-text get-margin" style="position: relative;left: 22px;">' + projects[i].desc + '</span></span><br><span class="black-text get-margin">Year : <span class="blue-text get-margin">' + projects[i].year 
-		+ '</span></span><br><span class="black-text get-margin">URL : </span><a class="pink-text get-margin" target="_blank" href="' + projects[i].url + '">Click here to see it</a></span></div>');
+		+ '</span></span><br><span class="black-text get-margin">URL : </span><a class="pink-text get-margin" target="_blank" href="' + projects[i].url + '">' + projects[i].url + '</a></span></div>');
 }
 
 for(var i=0;i<work.length;i++)
