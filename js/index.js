@@ -7,15 +7,20 @@ $('#footer1').hide();
 $('#about').hide();
 
 $('.circle').on('click' , function () {
-	$('html, body').animate({ scrollTop: $(document).height() }, 600);
 	displayBio();
 	$('#bio').show();
-	$('#bio').focus();
+	$('html,body').animate({
+        scrollTop: $('#bio').offset().top},'slow');
 	$('#education').show();
 	$('#projects').show();
 	$('#work').show();
 	$('#footer1').show();
 	$('#about').show();
+});
+
+$('#animated-button1').click(function () {
+	$('html,body').animate({
+        scrollTop: $('#header').offset().top},'slow');
 });
 
 var skills = [
