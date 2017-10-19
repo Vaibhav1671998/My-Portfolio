@@ -23,6 +23,13 @@ $('#animated-button1').click(function () {
         scrollTop: $('#header').offset().top},'slow');
 });
 
+$('.menuButton').click(function () {
+	setTimeout(function () {
+		$('.menuButton').find('h1').removeClass('fa-bars');
+		$('.menuButton').find('h1').addClass('fa-times');
+	},300);
+});
+
 var skills = [
 	'./img/c.png',
 	'./img/cpp.png',
