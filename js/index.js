@@ -5,6 +5,9 @@ $('#projects').hide();
 $('#work').hide();
 $('#footer1').hide();
 $('#about').hide();
+$('.BIO , .EDUCATION , .WORK , .PROJECTS').hide();
+
+var menuCount = 0;
 
 $('.circle').on('click' , function () {
 	displayBio();
@@ -24,10 +27,51 @@ $('#animated-button1').click(function () {
 });
 
 $('.menuButton').click(function () {
-	setTimeout(function () {
+	menuCount++;
+	if($('.menuButton').find('h1').hasClass('fa-bars'))
+	{
 		$('.menuButton').find('h1').removeClass('fa-bars');
 		$('.menuButton').find('h1').addClass('fa-times');
-	},300);
+		
+		$('.quote-content').attr('style','top:40%;');
+		$('.BIO , .EDUCATION , .WORK , .PROJECTS').removeClass('animated slideOutLeft');
+		
+		$('.BIO').show();
+		$('.BIO').addClass('animated slideInLeft');
+		setTimeout(function () {
+			$('.EDUCATION').show();
+			$('.EDUCATION').addClass('animated slideInLeft');
+		},100);
+		setTimeout(function () {
+			
+			$('.PROJECTS').show();
+			$('.PROJECTS').addClass('animated slideInLeft');
+		},200);
+		setTimeout(function () {
+			$('.WORK').show();
+			$('.WORK').addClass('animated slideInLeft');
+		},300);
+	}
+ 	else if($('.menuButton').find('h1').hasClass('fa-times'))
+ 	{
+ 		$('.menuButton').find('h1').removeClass('fa-times');
+		$('.menuButton').find('h1').addClass('fa-bars');
+		$('.BIO , .EDUCATION , .WORK , .PROJECTS').removeClass('animated slideInLeft');
+		$('.WORK').addClass('animated slideOutLeft');
+		setTimeout(function () {
+			$('.PROJECTS').addClass('animated slideOutLeft');
+		},100);
+		setTimeout(function () {
+			$('.EDUCATION').addClass('animated slideOutLeft');
+		},200);
+		setTimeout(function () {
+			$('.BIO').addClass('animated slideOutLeft');
+		},300);
+		setTimeout(function () {
+			$('.BIO , .EDUCATION , .WORK , .PROJECTS').hide();	
+		},1200);
+		
+ 	}
 });
 
 var skills = [

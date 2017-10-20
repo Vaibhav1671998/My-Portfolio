@@ -14,9 +14,10 @@
     <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
     <link defer href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
     <link defer href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 </head>
-<body class="img-responsive">
-    <div id="header">
+<body>
+    <div id="head">
 		<!-- <nav role="navigation">
 		  <div id="menuToggle">
 		    <input type="checkbox"/> 
@@ -32,11 +33,20 @@
 		  </div> 
 		</nav> -->
         <!-- <i id="hamburgur" class="fa fa-bars col-md-1" aria-hidden="true"></i> -->
-        <div class="menuButton col-md-6">
-            <h1 class="fa fa-bars hamburger" aria-hidden="true" style="font-size:30px; margin-top:6px; color: gold;"></h1>
-        </div>
-    	<h1 id="name" class="col-md-6">Vaibhav</h1>
+        <div id="header">
+        	<h1 id="name" class="col-md-6">Vaibhav</h1>
+	    	<div class="menuButton col-md-6">
+	            <h1 class="fa fa-bars hamburger" aria-hidden="true" style="font-size:30px; margin-top:6px; color: gold;justify-content: flex-end;display: flex;margin-right: 10px;"></h1> 
+	        </div>
+        </div> 
+        <div id="menuItems">
+			<p class="items BIO animated slideInLeft">Bio</p>
+			<p class="items EDUCATION animated slideInLeft">Education</p>
+			<p class="items PROJECTS animated slideInLeft">Projects</p>
+			<p class="items WORK animated slideInLeft">Work Experience</p>
+		</div>  
     </div>
+    
     <div class="quote-content">
         <div class="col-md-6" style="justify-content: center;align-items: center;display: flex;">
             <i id="test" class="fa fa-star" aria-hidden="true"></i>
