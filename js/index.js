@@ -125,17 +125,17 @@ var skills = [
 
 var education  = [
 	{
-		institute : 'Sanatan Vidya Mandir Sen. Sec. School , Ludhiana',
+		institute : 'XYZ School , ABC City',
 		img : './img/svm.jpg',
-		alt : 'SVM School image',
-		year : '2014',
+		alt : 'XYZ city',
+		year : '****',
 		major : ['English ',' Hindi ',' Punjabi']
 	},
 	{
-		institute : 'Bhartiya Vidya Mandir Sen. Sec. School , Ludhiana',
+		institute : 'ABC City , XYZ City',
 		img : './img/bvm.jpg',
-		alt : 'SVM School image',
-		year : '2016',
+		alt : 'ABC City',
+		year : '***',
 		major : ['Physics ' , ' Chemistry ' , ' Maths']
 	}
 ];
